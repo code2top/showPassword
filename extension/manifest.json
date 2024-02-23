@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Show Password",
+  "version": "1.0",
+  "description": "A Chrome extension to easily reveal passwords on web pages.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle",
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
